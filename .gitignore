@@ -1,0 +1,88 @@
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+bin/
+obj/
+
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.vspscc
+*.user
+*.suo
+*.useroptions
+*.sln.docstates
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.suo.ps1
+*.suo.ps1xml
+*.suo.snk
+*.suo.snk2
+
+# Package files
+*.nupkg
+*.pkl
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.exe.config
+*.log
+*.zip
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio for Mac
+.vscode/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo.ps1
+*.suo.ps1xml
+*.suo.snk
+*.suo.snk2
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
