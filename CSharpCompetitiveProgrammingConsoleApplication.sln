@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCompetitiveProgrammingConsoleApplication", "CSharpCompetitiveProgrammingConsoleApplication\CSharpCompetitiveProgrammingConsoleApplication.csproj", "{A2971E5A-F650-42CC-BBFC-8AAB28FF9879}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeapDataStructureAndproblems", "HeapDataStructureAndproblems\HeapDataStructureAndproblems.csproj", "{44397827-0671-4DCD-8B7F-0A99659EA196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursions", "Recursions\Recursions.csproj", "{5192D45E-7F85-427C-A7F2-4FDBD9F089BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{A2971E5A-F650-42CC-BBFC-8AAB28FF9879}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2971E5A-F650-42CC-BBFC-8AAB28FF9879}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2971E5A-F650-42CC-BBFC-8AAB28FF9879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44397827-0671-4DCD-8B7F-0A99659EA196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44397827-0671-4DCD-8B7F-0A99659EA196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44397827-0671-4DCD-8B7F-0A99659EA196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44397827-0671-4DCD-8B7F-0A99659EA196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5192D45E-7F85-427C-A7F2-4FDBD9F089BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5192D45E-7F85-427C-A7F2-4FDBD9F089BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5192D45E-7F85-427C-A7F2-4FDBD9F089BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5192D45E-7F85-427C-A7F2-4FDBD9F089BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
