@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="../Recursions/Recursions.csproj" />
     <ProjectReference Include="../HeapDataStructureAndproblems/HeapDataStructureAndproblems.csproj" />
+    <ProjectReference Include="../StackAndQueue/StackAndQueue.csproj" />
   </ItemGroup>
 
 </Project>
