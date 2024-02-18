@@ -10,6 +10,7 @@
     <ProjectReference Include="../Recursions/Recursions.csproj" />
     <ProjectReference Include="../HeapDataStructureAndproblems/HeapDataStructureAndproblems.csproj" />
     <ProjectReference Include="../StackAndQueue/StackAndQueue.csproj" />
+    <ProjectReference Include="../SlidingWindow/SlidingWindow.csproj" />
   </ItemGroup>
 
 </Project>

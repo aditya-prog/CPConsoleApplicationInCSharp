@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursions", "Recursions\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackAndQueue", "StackAndQueue\StackAndQueue.csproj", "{883DD4AF-DAB6-416A-98A9-2A89DEF2075A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlidingWindow", "SlidingWindow\SlidingWindow.csproj", "{B44A6AC3-39CE-4E0E-974B-D9B733B4B5B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{883DD4AF-DAB6-416A-98A9-2A89DEF2075A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{883DD4AF-DAB6-416A-98A9-2A89DEF2075A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{883DD4AF-DAB6-416A-98A9-2A89DEF2075A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44A6AC3-39CE-4E0E-974B-D9B733B4B5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44A6AC3-39CE-4E0E-974B-D9B733B4B5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44A6AC3-39CE-4E0E-974B-D9B733B4B5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44A6AC3-39CE-4E0E-974B-D9B733B4B5B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

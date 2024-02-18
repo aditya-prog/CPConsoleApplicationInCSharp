@@ -20,7 +20,7 @@ namespace HeapDataStructureAndProblems
             // topKFrequentElements.PrintInputOutput();
 
             //4
-            MedianFinder.InvokeMedianFinderAndPrintOutput();
+            // MedianFinder.InvokeMedianFinderAndPrintOutput();
             
 
             
