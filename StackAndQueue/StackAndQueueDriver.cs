@@ -41,19 +41,29 @@ public class StackAndQueueDriver
         // stack.PrintStack(st);
 
         // 4.
-        Console.WriteLine();
-        int[] arr = [4,7, 2, 1, 87, 45, 23, 59, 65, 61];
-        var prevNext = new Next_Prev_Greater_Smaller();
-        Console.WriteLine($"Given Input array.... ");
-        prevNext.Print(arr);
+        // Console.WriteLine();
+        // int[] arr = [4,7, 2, 1, 87, 45, 23, 59, 65, 61];
+        // var prevNext = new Next_Prev_Greater_Smaller();
+        // Console.WriteLine($"Given Input array.... ");
+        // prevNext.Print(arr);
 
-        Console.WriteLine($"NextGreter element.... ");
-        prevNext.Print(prevNext.NextGreaterElement([..arr]));
+        // Console.WriteLine($"NextGreter element.... ");
+        // prevNext.Print(prevNext.NextGreaterElement([..arr]));
 
-        Console.WriteLine($"PrevSmaller element....");
-        prevNext.Print(prevNext.PrevSmallerElement([..arr]));
+        // Console.WriteLine($"PrevSmaller element....");
+        // prevNext.Print(prevNext.PrevSmallerElement([..arr]));
 
         //5
-        var lruCache = new LRUCache(5);
+        int x = 0;
+        var lruCache = new LRUCache(2);
+        lruCache.Put(1,1);
+        lruCache.Put(2, 2);
+        x = lruCache.Get(1);
+        lruCache.Put(3, 3);
+        x = lruCache.Get(2);
+        lruCache.Put(4,4);
+        x = lruCache.Get(1);
+        x = lruCache.Get(3);
+        x = lruCache.Get(4);
     }
 }
