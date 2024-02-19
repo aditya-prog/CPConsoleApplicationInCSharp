@@ -57,20 +57,15 @@ namespace StackAndQueue
 
                 var nodeToInsert = new Node(key, value);
 
-                // if capacity available, directly insert at end of DLL
-                if(dictionary.Count < capacity){
-                    AddNodeAtDLLEnd(nodeToInsert);
-                    AddInDictionary(key, nodeToInsert);
-                }
-                else{
-                    // If no capacity, first evict one element from cache and then add new incoming element
+                // if capacity not available,  evict first element(i.e LRU) from queue/DLL
+                if(dictionary.Count == capacity){
                     int keyToRemove = RemoveNodeFromDLL(head);
                     RemoveFromDictionary(keyToRemove);
-
-                    // Now add the incoming element to both dict and DLL
-                    AddNodeAtDLLEnd(nodeToInsert);
-                    AddInDictionary(key, nodeToInsert);
                 }
+                
+                // Now add the incoming element to both dict and DLL
+                AddNodeAtDLLEnd(nodeToInsert);
+                AddInDictionary(key, nodeToInsert);
             }
         }
 

@@ -53,17 +53,36 @@ public class StackAndQueueDriver
         // Console.WriteLine($"PrevSmaller element....");
         // prevNext.Print(prevNext.PrevSmallerElement([..arr]));
 
-        //5
-        int x = 0;
-        var lruCache = new LRUCache(2);
-        lruCache.Put(1,1);
-        lruCache.Put(2, 2);
-        x = lruCache.Get(1);
-        lruCache.Put(3, 3);
-        x = lruCache.Get(2);
-        lruCache.Put(4,4);
-        x = lruCache.Get(1);
-        x = lruCache.Get(3);
-        x = lruCache.Get(4);
+        //Test LRUCache
+        // int x = 0;
+        // var lruCache = new LRUCache(2);
+        // lruCache.Put(1,1);
+        // lruCache.Put(2, 2);
+        // x = lruCache.Get(1);
+        // lruCache.Put(3, 3);
+        // x = lruCache.Get(2);
+        // lruCache.Put(4,4);
+        // x = lruCache.Get(1);
+        // x = lruCache.Get(3);
+        // x = lruCache.Get(4);
+
+
+        // Test LFUCache
+        LFUCache cache = new LFUCache(2);
+        cache.Put(1, 1);
+        cache.Put(2, 2);
+        Console.WriteLine(cache.Get(1)); // Output: 1
+        cache.Put(3, 3);
+        Console.WriteLine(cache.Get(2)); // Output: -1 (Key 2 not found)
+        Console.WriteLine(cache.Get(3)); // Output: 3
+        cache.Put(4, 4);
+        Console.WriteLine(cache.Get(1)); // Output: -1 (Key 1 not found)
+        Console.WriteLine(cache.Get(3)); // Output: 3
+        Console.WriteLine(cache.Get(4)); // Output: 4
+
+        // Test LargestRectangleInHistogram
+        var area = new LargestRectangleInHistogram();
+        int[] heights = [2,1,5,6,2,3]; 
+        area.LargestRectangleArea(heights);
     }
 }
