@@ -68,21 +68,60 @@ public class StackAndQueueDriver
 
 
         // Test LFUCache
-        LFUCache cache = new LFUCache(2);
-        cache.Put(1, 1);
-        cache.Put(2, 2);
-        Console.WriteLine(cache.Get(1)); // Output: 1
-        cache.Put(3, 3);
-        Console.WriteLine(cache.Get(2)); // Output: -1 (Key 2 not found)
-        Console.WriteLine(cache.Get(3)); // Output: 3
-        cache.Put(4, 4);
-        Console.WriteLine(cache.Get(1)); // Output: -1 (Key 1 not found)
-        Console.WriteLine(cache.Get(3)); // Output: 3
-        Console.WriteLine(cache.Get(4)); // Output: 4
+        // LFUCache cache = new LFUCache(2);
+        // cache.Put(1, 1);
+        // cache.Put(2, 2);
+        // Console.WriteLine(cache.Get(1)); // Output: 1
+        // cache.Put(3, 3);
+        // Console.WriteLine(cache.Get(2)); // Output: -1 (Key 2 not found)
+        // Console.WriteLine(cache.Get(3)); // Output: 3
+        // cache.Put(4, 4);
+        // Console.WriteLine(cache.Get(1)); // Output: -1 (Key 1 not found)
+        // Console.WriteLine(cache.Get(3)); // Output: 3
+        // Console.WriteLine(cache.Get(4)); // Output: 4
 
         // Test LargestRectangleInHistogram
-        var area = new LargestRectangleInHistogram();
-        int[] heights = [2,1,5,6,2,3]; 
-        area.LargestRectangleArea(heights);
+        // var area = new LargestRectangleInHistogram();
+        // int[] heights = [2,1,5,6,2,3]; 
+        // Console.WriteLine("Largest Rectangular area is: "+area.LargestRectangleArea(heights));
+
+        // Test MinStack
+        // var minStack = new MinStack();
+        // minStack.Push(2);
+        // minStack.Push(3);
+        // minStack.Push(4);
+        // Console.WriteLine(minStack.Top()); // 4
+        // Console.WriteLine(minStack.GetMin()); // 2
+        // minStack.Push(-1);
+        // Console.WriteLine(minStack.Top()); // -1
+        // Console.WriteLine(minStack.GetMin()); // -1
+        // minStack.Pop();
+        //  Console.WriteLine(minStack.Top()); // 4
+        // Console.WriteLine(minStack.GetMin()); // 2
+
+        // Test: Celibrity problem    
+        // int[,] M = { { 0, 0, 1, 0 },
+        //              { 0, 0, 1, 0 },
+        //              { 0, 0, 0, 0 },
+        //              { 0, 0, 1, 0 } };
+
+        // int celebIdx = new Celibrity().Celebrity(M, 4);
+
+        // if (celebIdx == -1)
+        //     Console.Write("No Celebrity");
+        // else
+        // {
+        //     Console.Write("Celebrity ID " + celebIdx);
+        // }
+
+        // Test Stock span problem
+        StockSpanner span = new StockSpanner();
+        Console.WriteLine(span.GetSpan(100)); // 1
+        Console.WriteLine(span.GetSpan(80)); // 1
+        Console.WriteLine(span.GetSpan(60)); // 1
+        Console.WriteLine(span.GetSpan(70)); // 2
+        Console.WriteLine(span.GetSpan(60)); // 1
+        Console.WriteLine(span.GetSpan(75)); // 4
+        Console.WriteLine(span.GetSpan(85)); // 6
     }
 }
