@@ -11,6 +11,7 @@
     <ProjectReference Include="../HeapDataStructureAndproblems/HeapDataStructureAndproblems.csproj" />
     <ProjectReference Include="../StackAndQueue/StackAndQueue.csproj" />
     <ProjectReference Include="../SlidingWindow/SlidingWindow.csproj" />
+    <ProjectReference Include="../StringsAndItsVariants/StringsAndItsVariants.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@
 using Recursions;
 using SlidingWindow;
 using StackAndQueue;
+using StringsAndItsVariants;
 
 namespace CSharpProblems
 {
@@ -13,6 +14,7 @@ namespace CSharpProblems
             HeapDataStructureDriver.Drive();
             StackAndQueueDriver.Drive();
             SlidingWindowsDriver.Drive();
+            StringDriver.Drive();
         }
     }
 }

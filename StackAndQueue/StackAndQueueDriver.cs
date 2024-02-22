@@ -115,13 +115,13 @@ public class StackAndQueueDriver
         // }
 
         // Test Stock span problem
-        StockSpanner span = new StockSpanner();
-        Console.WriteLine(span.GetSpan(100)); // 1
-        Console.WriteLine(span.GetSpan(80)); // 1
-        Console.WriteLine(span.GetSpan(60)); // 1
-        Console.WriteLine(span.GetSpan(70)); // 2
-        Console.WriteLine(span.GetSpan(60)); // 1
-        Console.WriteLine(span.GetSpan(75)); // 4
-        Console.WriteLine(span.GetSpan(85)); // 6
+        // StockSpanner span = new StockSpanner();
+        // Console.WriteLine(span.GetSpan(100)); // 1
+        // Console.WriteLine(span.GetSpan(80)); // 1
+        // Console.WriteLine(span.GetSpan(60)); // 1
+        // Console.WriteLine(span.GetSpan(70)); // 2
+        // Console.WriteLine(span.GetSpan(60)); // 1
+        // Console.WriteLine(span.GetSpan(75)); // 4
+        // Console.WriteLine(span.GetSpan(85)); // 6
     }
 }
