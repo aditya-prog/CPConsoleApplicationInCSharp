@@ -10,10 +10,10 @@ namespace StringsAndItsVariants
     // Worst TC occurs when hash of all substrings of txt matches with hash of pattern
     class RabinKarp
     {
-        private const int Prime = 101; // Prime number for hashing
-        private const int Mod = 1000000007; // Modulus value to avoid overflow
+        private const int Prime = 101; // number for hashing
+        private const int Mod = 101; // Modulus value to avoid overflow
 
-        // Function to implement Rabin-Karp algorithm
+         // Function to implement Rabin-Karp algorithm
         public void Search(string text, string pattern)
         {
             int n = text.Length;
@@ -99,7 +99,7 @@ namespace StringsAndItsVariants
 
             return res;
         }
-
+      
     }
 
 }

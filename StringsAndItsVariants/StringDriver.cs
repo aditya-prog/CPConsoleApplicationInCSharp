@@ -33,13 +33,13 @@ public class StringDriver
         // lcp.LongestCommonPrefix(lst);
 
         // Test RabinKarp Algo
-        var rabinKarp = new RabinKarp();
-        var kmp = new KMP();
+        // var rabinKarp = new RabinKarp();
+        // var kmp = new KMP();
 
-        string txt = "ADITYA WEDS ANKITA AT ADITYA HOTEL";
-        string pat = "HOTEL";
-        rabinKarp.Search(txt, pat);
-        Console.WriteLine("Index for KMP Search: "+kmp.Search(txt, pat));
+        // string txt = "ADITYA WEDS ANKITA AT ADITYA HOTEL";
+        // string pat = "ANKITA";
+        // rabinKarp.Search(txt, pat);
+        // Console.WriteLine("Using KMP alog, Pattern found at Index: "+kmp.Search(txt, pat));
 
         // var palindrome = new MinCharctersForPalindrome();
         // string str = "ABC";
