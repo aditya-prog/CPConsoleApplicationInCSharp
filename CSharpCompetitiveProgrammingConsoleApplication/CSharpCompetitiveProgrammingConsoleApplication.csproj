@@ -12,6 +12,7 @@
     <ProjectReference Include="../StackAndQueue/StackAndQueue.csproj" />
     <ProjectReference Include="../SlidingWindow/SlidingWindow.csproj" />
     <ProjectReference Include="../StringsAndItsVariants/StringsAndItsVariants.csproj" />
+    <ProjectReference Include="../BinaryTree/BinaryTree.csproj" />
   </ItemGroup>
 
 </Project>
