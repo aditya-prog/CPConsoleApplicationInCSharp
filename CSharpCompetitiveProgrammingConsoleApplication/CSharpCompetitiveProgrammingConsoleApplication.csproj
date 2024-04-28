@@ -13,6 +13,7 @@
     <ProjectReference Include="../SlidingWindow/SlidingWindow.csproj" />
     <ProjectReference Include="../StringsAndItsVariants/StringsAndItsVariants.csproj" />
     <ProjectReference Include="../BinaryTree/BinaryTree.csproj" />
+    <ProjectReference Include="../Graph/Graph.csproj" />
   </ItemGroup>
 
 </Project>

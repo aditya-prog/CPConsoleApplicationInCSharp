@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringsAndItsVariants", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{1E163666-335E-4B70-843D-17E491B863C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{FECCDA95-8464-4CC8-9748-F0D31B791556}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{1E163666-335E-4B70-843D-17E491B863C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E163666-335E-4B70-843D-17E491B863C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E163666-335E-4B70-843D-17E491B863C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECCDA95-8464-4CC8-9748-F0D31B791556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECCDA95-8464-4CC8-9748-F0D31B791556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECCDA95-8464-4CC8-9748-F0D31B791556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECCDA95-8464-4CC8-9748-F0D31B791556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

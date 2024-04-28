@@ -108,12 +108,12 @@ namespace BinaryTree
             }
         }
 
-        public static IList<IList<int>> LevelOrderTraversalUsingDelimiter(BinaryTreeNode root)
+        public static void LevelOrderTraversalUsingDelimiter(BinaryTreeNode root)
         {
             var res = new List<IList<int>>();
             if (root == null)
             {
-                return res;
+                return;
             }
 
             var queue = new Queue<BinaryTreeNode>();
@@ -150,15 +150,15 @@ namespace BinaryTree
 
             }
 
-            return res;
+            Print(res);
         }
 
-        public IList<IList<int>> LevelOrderTraversalWithoutDelimiter(BinaryTreeNode root)
+        public static void LevelOrderTraversalWithoutDelimiter(BinaryTreeNode root)
         {
             var res = new List<IList<int>>();
             if (root == null)
             {
-                return res;
+                return;
             }
 
             var queue = new Queue<BinaryTreeNode>();
@@ -189,9 +189,10 @@ namespace BinaryTree
 
             }
 
-            return res;
+            Print(res);
         }
 
+        //TODO: Rest of the traversals will be taken at the end of DSA
         public static void LevelOrderTraversalSpiral(BinaryTreeNode root)
         {
 
@@ -205,6 +206,19 @@ namespace BinaryTree
         public static void ZigZagTraversal(BinaryTreeNode root)
         {
 
+        }
+
+        private static void Print(List<IList<int>> listOfLists)
+        {
+            // Print the elements of the list of lists
+            foreach (var list in listOfLists)
+            {
+                foreach (var item in list)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine();
+            }
         }
 
     }

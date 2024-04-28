@@ -4,6 +4,7 @@ using Recursions;
 using SlidingWindow;
 using StackAndQueue;
 using StringsAndItsVariants;
+using Graph;
 
 namespace CSharpProblems
 {
@@ -17,6 +18,7 @@ namespace CSharpProblems
             SlidingWindowsDriver.Drive();
             StringDriver.Drive();
             BinaryTreeDriver.Drive();
+            GraphDriver.Drive();
         }
     }
 }
