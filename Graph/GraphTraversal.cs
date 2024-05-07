@@ -152,6 +152,69 @@ namespace Graph
             }
         }
 
-       
+        // Kahn's Algo
+        public static void TopologicalSortUsingBFS(Graph graph){
+            var indegree = new int[graph.vertices];
+            var queue = new Queue<int>();
+
+            // Calculate indegree of all nodes
+            for (int i = 0; i < graph.vertices; i++)
+            {
+                foreach (int node in graph.adjList[i])
+                {
+                   indegree[node]++; 
+                }
+            }
+
+
+            // Insert all nodes into queue whose indegree is 0
+            for(int i=0; i<graph.vertices; i++){
+                if(indegree[i] == 0){
+                    queue.Enqueue(i);
+                }
+            }
+
+            // BFS
+            while(queue.Count > 0){
+                var node = queue.Dequeue();
+                Console.Write(node+ " ");
+
+                // Go through all the adjNode of curr node and reduce the indegree by 1 for all its adjNodes
+                foreach (var adjNode in graph.adjList[node])
+                {
+                    indegree[adjNode]--;
+                    if(indegree[adjNode] == 0){
+                        queue.Enqueue(adjNode);
+                    }
+                }
+            }
+
+        }
+
+        public static void TopologicalSortUsingDFS(Graph graph){
+            var visited = new bool[graph.vertices];
+            var stack = new Stack<int>();
+
+            for(int i = 0; i < graph.vertices; i++){
+                if(!visited[i]){
+                    TopologicalSortDFSUtil(i, graph, visited, stack);
+                }
+            }
+        }
+
+        private static void TopologicalSortDFSUtil(int node, Graph graph, bool[] visited, Stack<int> stack)
+        {
+            visited[node] = true;
+
+            foreach (var adjNode in graph.adjList[node])
+            {
+                if(!visited[adjNode]){
+                    TopologicalSortDFSUtil(adjNode, graph, visited, stack);
+                }
+            }
+
+            // Finally push current node in stack
+            stack.Push(node);
+        }
     }
 }

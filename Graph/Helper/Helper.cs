@@ -11,6 +11,21 @@ namespace Graph
                 [3, 7],[3, 8], [5, 8], [6, 7], [6, 9]
             ];
 
+            int[][] nonCyclicEdges = new int[][]
+            {
+                new int[] {0, 1},  // Edge between 0 and 1
+                new int[] {0, 2},  // Edge between 0 and 2
+                new int[] {0, 4},  // Edge between 0 and 4
+                new int[] {0, 8},  // Edge between 0 and 8
+                new int[] {1, 5},  // Edge between 1 and 5
+                new int[] {1, 6},  // Edge between 1 and 6
+                new int[] {1, 9},  // Edge between 1 and 9
+                new int[] {3, 7},  // Edge between 3 and 7
+                new int[] {3, 8},  // Edge between 3 and 8
+                // new int[] {1, 4},  // Edge between 3 and 8
+            };
+
+
             // Creates undirected graph with adjList
             var graph = new Graph(V);
             foreach (var edge in edges)

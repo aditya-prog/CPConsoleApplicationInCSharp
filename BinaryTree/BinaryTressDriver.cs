@@ -4,6 +4,7 @@ public class BinaryTreeDriver
 {
     public static void Drive()
     {
+        /*
         Console.WriteLine(Environment.NewLine + "Binary Tree Driver: ");
         var tree = Helper.GetBinaryTree();
 
@@ -35,7 +36,9 @@ public class BinaryTreeDriver
         Console.WriteLine(Environment.NewLine + "Left View of tree: ");
         BinaryTreeViews.LeftView(tree);
         Console.WriteLine(Environment.NewLine + "Right View of tree: ");
-        BinaryTreeViews.RightView(tree);   
+        BinaryTreeViews.RightView(tree);  
+
+        */ 
     }
 }
 

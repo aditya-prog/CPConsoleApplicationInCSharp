@@ -25,7 +25,25 @@ public class GraphDriver
         GraphTraversal.BFS_MarkVisitedWhenPoppingFromQueue(graph);
 
         // Cycle in Directed and Undirected Graph using BFS and DFS
-        
+        Console.WriteLine();
+        Console.WriteLine($"Cycle detected in Undirected Graph using BFS ? {(CycleInGraph.DetectCycleInUndirectedGraphUsingBFS(graph) ? "Yes" : "No")}");
+
+        Console.WriteLine();
+        Console.WriteLine($"Cycle detected in Undirected Graph using DFS ? {(CycleInGraph.DetectCycleInUndirectedGraphUsingDFS(graph) ? "Yes" : "No")}");
+
+        Console.WriteLine();
+        Console.WriteLine($"Cycle detected in Directed Graph using BFS ? {(CycleInGraph.DetectCycleInDirectedGraphUsingBFS(graph) ? "Yes" : "No")}");
+
+        Console.WriteLine();
+        Console.WriteLine($"Cycle detected in Directed Graph using DFS ? {(CycleInGraph.DetectCycleInDirectedGraphUsingDFS(graph) ? "Yes" : "No")}");
+
+        Console.WriteLine();
+        Console.WriteLine("Following is Topological sorting using BFS ..");
+        GraphTraversal.TopologicalSortUsingBFS(graph);
+
+        Console.WriteLine();
+        Console.WriteLine("Following is Topological sorting using DFS ..");
+        GraphTraversal.TopologicalSortUsingDFS(graph);
     }
 }
 
