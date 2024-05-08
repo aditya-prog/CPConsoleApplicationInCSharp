@@ -83,6 +83,7 @@ public class CycleInGraph{
     // Using BFS Topological sort (Kahn's algo)
     // Intution: Topological sort can happen only on DAG, so if topo sort is not succesful it means cycle
     public static bool DetectCycleInDirectedGraphUsingBFS(Graph graph){
+        // Note: Here even there are multiple components , it will work without iterating for all the nodes in visited array
             var indegree = new int[graph.vertices];
             var queue = new Queue<int>();
 

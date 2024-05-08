@@ -154,6 +154,8 @@ namespace Graph
 
         // Kahn's Algo
         public static void TopologicalSortUsingBFS(Graph graph){
+
+            // It will work even for disconnected graph
             var indegree = new int[graph.vertices];
             var queue = new Queue<int>();
 
@@ -199,6 +201,11 @@ namespace Graph
                 if(!visited[i]){
                     TopologicalSortDFSUtil(i, graph, visited, stack);
                 }
+            }
+            
+            foreach (var item in stack)
+            {
+                Console.Write(item+" ");
             }
         }
 
