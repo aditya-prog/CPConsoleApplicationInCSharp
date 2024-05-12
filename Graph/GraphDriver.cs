@@ -52,6 +52,21 @@ public class GraphDriver
         Console.WriteLine();
         Console.WriteLine($"Check if current graph is Bipartite using DFS ? {(BipartiteGraph.BipartiteCheckUsingDFS(graph) ? "Yes" : "No")}");
 
+        // GraphAlgos
+        // Works with both Directed and Undirected graph
+        Console.WriteLine();
+        Console.WriteLine("Following is DijikstraAlgo using Priority Queue having TC(E*Log(V) or V^2*Log(V)) ..");
+        GraphAlgorithms.DijikstraAlgo(Helper.GetWeightedUndirectedGraph(), sourceNode: 2);
+
+         // Works with both Directed and Undirected graph
+        Console.WriteLine();
+        Console.WriteLine("Following is BellmanFordAlgo having TC(E*V) or V^3) ..");
+        GraphAlgorithms.BellmanFordAlgo(Helper.GetWeightedUndirectedGraph(), sourceNode: 2);
+
+         // Works with both Directed and Undirected graph
+        Console.WriteLine();
+        Console.WriteLine("Following is FloydWarshallAlgo using DP having TC(V^3)..");
+        GraphAlgorithms.FloydWarshallAlgo(Helper.GetWeightedUndirectedGraph());
     }
 }
 

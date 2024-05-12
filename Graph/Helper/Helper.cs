@@ -2,6 +2,24 @@ namespace Graph
 {
     public class Helper
     {
+        public static Graph GetWeightedUndirectedGraph()
+        {
+            int V = 3;
+            int[][] edges = 
+            [
+                [0, 1, 1],  [0, 2, 6], [1, 2, 3] // u, v, Weight
+            ];
+
+            // Creates undirected graph with adjList
+            var graph = new Graph(V);
+            foreach (var edge in edges)
+            {
+                graph.addWeightedEdge(edge[0], edge[1], edge[2]);
+                graph.addWeightedEdge(edge[1], edge[0], edge[2]);
+            }
+
+            return graph;
+        }
         public static Graph GetUndirectedGraph()
         {
             int V = 10;
@@ -43,21 +61,32 @@ namespace Graph
         public int vertices; // Number of Vertices
          
         public List<int>[] adjList; // adjacency lists
+
+        public List<List<int>>[] adjListWeighted;
          
         // Constructor
         public Graph(int V)
         {
             vertices = V;
             adjList = new List<int>[V];
+            adjListWeighted = new List<List<int>>[V];
              
             for (int i = 0; i < adjList.Length; i++)
+            {
                 adjList[i] = new List<int>();
+                adjListWeighted[i] = new List<List<int>>();
+            }
              
         }
 
         public void addEdge(int u, int v)
         {
             adjList[u].Add(v);
+        }
+
+        public void addWeightedEdge(int u, int v, int weight)
+        {
+            adjListWeighted[u].Add(new List<int>{v, weight});
         }
     }
 }
