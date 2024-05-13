@@ -163,9 +163,51 @@ public class GraphAlgorithms
 
     }
 
+    // Almost similar to Dijkstra except the fact that here we whave visisted array and Dijkstra has dist array
+    // Also here we update visited array only when we pop from queue and not when we push into queue
     public static void MSTPrimsAlgo(Graph graph)
     {
+        int sum = 0; // Holds sum of mst
+        var mstEdges = new List<Tuple<int, int, int>>(); // Holds edges of MST with their weight
 
+        var visited = new bool[graph.vertices];
+        // TElement is {node, parNode, wtOfTheEdge between node and parnode} and TPriority is edgeWeight
+         // If mstEdges are not required then we can have have PQ with TElement as Tuple<node, wt>
+        var pq = new PriorityQueue<Tuple<int, int, int>, int>(); 
+
+        pq.Enqueue(Tuple.Create(0, -1, 0), 0); // node  = 0, parNode = -1(initially) and wt = 0
+
+        while(pq.Count> 0){
+            var (node, parNode, wt) = pq.Dequeue();
+
+            if(visited[node]){
+                continue;
+            }
+
+            visited[node] = true;
+            if(parNode != -1){
+                sum += wt;
+                mstEdges.Add(Tuple.Create(parNode, node, wt));
+            }
+
+            foreach (var adjItems in graph.adjListWeighted[node])
+            {
+                var adjNode = adjItems[0];
+                var adjWt = adjItems[1];
+
+                if(!visited[adjNode]){
+                    // adjNode becomes node and node becomes parNode...
+                    pq.Enqueue(Tuple.Create(adjNode, node, adjWt), adjWt); 
+                }
+            }
+        }
+
+        // print output
+        foreach (var (parNode, node, wt) in mstEdges)
+        {
+            Console.WriteLine(parNode + "->" + node + ": " + wt);
+        }
+        Console.WriteLine("MST Sum is: "+ sum);
     }
 
     public static void MSTKruskalAlgo(Graph graph)

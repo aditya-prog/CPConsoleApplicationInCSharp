@@ -67,6 +67,44 @@ public class GraphDriver
         Console.WriteLine();
         Console.WriteLine("Following is FloydWarshallAlgo using DP having TC(V^3)..");
         GraphAlgorithms.FloydWarshallAlgo(Helper.GetWeightedUndirectedGraph());
+
+        // A minimum spanning tree (MST) is typically associated with undirected graphs
+        Console.WriteLine();
+        Console.WriteLine("Following is MSTPrimsAlgo using Priority Queue having TC(E*Log(E)) ..");
+        GraphAlgorithms.MSTPrimsAlgo(Helper.GetWeightedUndirectedGraph());
+
+         //A minimum spanning tree (MST) is typically associated with undirected graphs.
+        Console.WriteLine();
+        Console.WriteLine("Following is MSTKruskalAlgo having TC(E*LogE+ E*LogV) ..");
+        GraphAlgorithms.MSTKruskalAlgo(Helper.GetWeightedUndirectedGraph());
+
+        // Disjoint Set Algo
+        Console.WriteLine();
+        Console.WriteLine("Following is DisjointSet algorithm ..");
+        var ds = new DisjointSet(7);
+        ds.UnionBySize(1, 2);
+        ds.UnionBySize(2, 3);
+        ds.UnionBySize(4, 5);
+        ds.UnionBySize(6, 7);
+        ds.UnionBySize(5, 6);
+        // check if 3 and 7 belong to same component or not
+        if(ds.FindParent(3) == ds.FindParent(7)){
+            Console.WriteLine("6 and 7 belong to same component");
+        }
+        else {
+            Console.WriteLine("6 and 7 belong to different component");
+        }
+
+        ds.UnionBySize(3, 7);
+
+        //Again check if 3 and 7 belong to same component or not
+        if(ds.FindParent(3) == ds.FindParent(7)){
+            Console.WriteLine("6 and 7 belong to same component");
+        }
+        else {
+            Console.WriteLine("6 and 7 belong to different component");
+        }
+
     }
 }
 
