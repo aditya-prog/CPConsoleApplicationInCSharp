@@ -4,6 +4,7 @@ public class DisjointSet{
  private List<int> size = new List<int>();
  private List<int> rank = new List<int>();
 
+// Take input as number of vertices
  public DisjointSet(int n){
     // We are maintaining lists of length n+1, so that same code can work for both zero based and non-zero bqased graphs
     for(int i=0; i<=n; i++){

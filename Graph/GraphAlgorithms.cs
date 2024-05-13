@@ -212,6 +212,53 @@ public class GraphAlgorithms
 
     public static void MSTKruskalAlgo(Graph graph)
     {
+        /*
+        Approach:
+        1. Sort All the edges by weight in ascending order
+        2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far(using Disjoint set). 
+           If the cycle is not formed, include this edge. Else, discard it. 
+        3. Perform step 2 until we have V-1 edges in the spanning tree      
+        */
+
+        int sum = 0;
+        var mstEdges = new List<Tuple<int, int, int>>();
+        var edges = new List<List<int>>();
+        
+        for(int i=0; i<graph.vertices; i++){
+            foreach(var adjItem in graph.adjListWeighted[i]){
+                var u = i;
+                var v = adjItem[0];
+                var wt = adjItem[1];
+                
+                edges.Add(new List<int>{u, v, wt});
+            }
+        }
+        
+        var ds = new DisjointSet(graph.vertices);
+        
+        // Sort the edges
+        edges.Sort((a,b) => a[2] - b[2]); // sort by weight in asc order
+        
+        // Take edges one by one and check if the curr edge forms a cycle
+        foreach(var edge in edges){
+            // If u and v are part of diff component, then u---v will not form a cycle,
+            //henve add it in disjoint and res
+            if(ds.FindParent(edge[0]) != ds.FindParent(edge[1])){
+                sum += edge[2]; // add weight of curr edge in result
+                mstEdges.Add(Tuple.Create(edge[0], edge[1], edge[2])); // Add in MST array
+                ds.UnionBySize(edge[0], edge[1]);
+            }
+            
+            // If v and v are part of same component , then discard it because it will
+            // form a cycle 
+        }
+        
+        // print output
+        foreach (var (parNode, node, wt) in mstEdges)
+        {
+            Console.WriteLine(parNode + "->" + node + ": " + wt);
+        }
+        Console.WriteLine("MST Sum is: "+ sum);
 
     }
 }

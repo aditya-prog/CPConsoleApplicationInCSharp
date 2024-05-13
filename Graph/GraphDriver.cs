@@ -75,7 +75,7 @@ public class GraphDriver
 
          //A minimum spanning tree (MST) is typically associated with undirected graphs.
         Console.WriteLine();
-        Console.WriteLine("Following is MSTKruskalAlgo having TC(E*LogE+ E*LogV) ..");
+        Console.WriteLine("Following is MSTKruskalAlgo having TC(E*LogE) ..");
         GraphAlgorithms.MSTKruskalAlgo(Helper.GetWeightedUndirectedGraph());
 
         // Disjoint Set Algo
