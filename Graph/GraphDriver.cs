@@ -105,6 +105,9 @@ public class GraphDriver
             Console.WriteLine("6 and 7 belong to different component");
         }
 
+        // MinProdSpanningTree
+        MinproductSpanningTree.MinproductSpanningTreeFun();
+
     }
 }
 
