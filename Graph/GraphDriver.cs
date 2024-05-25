@@ -108,6 +108,16 @@ public class GraphDriver
         // MinProdSpanningTree
         MinproductSpanningTree.MinproductSpanningTreeFun();
 
+         // Shortest Path in a DAG in Linear time
+        Console.WriteLine();
+        Console.WriteLine(" Shortest Path in a DAG in Linear time O(V+E) ..");
+        new LongestPathProblems().ShortestPathInADAGFromASrc(Helper.GetWeightedDAG(), src: 1);
+
+         // Longest Path in a DAG in Linear time
+        Console.WriteLine();
+        Console.WriteLine(" Longest Path in a DAG in Linear time O(V+E) ..");
+        new LongestPathProblems().LongestPathInADAGFromASrc(Helper.GetWeightedDAG(), src: 1);
+
     }
 }
 
